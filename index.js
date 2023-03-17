@@ -25,6 +25,7 @@ const $searchText = $("#searchText");
 $search.on("click", function () {
   var searchText = $searchText.val();
   console.log(searchText);
+  $container.empty();
 
   $.get(
     `https://raw.githubusercontent.com/${searchText}/${searchText}/main/README.md`,
